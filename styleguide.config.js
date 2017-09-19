@@ -24,6 +24,10 @@ module.exports = {
       name: 'Overview',
       content: path.resolve(__dirname, 'src/Intro.md')
     },
+    {
+      name: 'Grid',
+      content: path.resolve(__dirname, 'src/grid/Grid.md')
+    },
     // {
     //   name: 'Fonts',
     //   content: path.resolve(__dirname, 'src/fonts/Fonts.md')
