@@ -12,7 +12,7 @@ React themeable component library.
 
 Please refer to the online styleguide for usage and a list of components:
 
-TODO: pages link
+<a href="https://mattanglin.github.io/kniferoll/" target="_blank">Online Styleguide</a>
 
 ### Running Locally
 
