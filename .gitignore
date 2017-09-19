@@ -1,0 +1,17 @@
+.DS_STORE
+node_modules
+dist/
+coverage/
+npm-debug.log
+.DS_Store
+.nyc_output
+.npmrc
+
+// Dist build at root
+/index.js
+/Intro.md
+/Wrapper/
+/components/
+/fonts/
+/themes/
+/styles/
