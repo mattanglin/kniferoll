@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --quiet --config=./webpack/dev.config.js --inline --hot --content-base build/ --port 1338",
     "build": "NODE_ENV=production babel src/ --out-dir ./ --copy-files",
     "lint": "eslint -c .eslintrc _templates bin src webpack",
-    "prepublish": "npm run lint && npm run test && npm run clean && npm run build",
+    "prepublish": "npm run lint && npm run clean && npm run build",
     "publish": "npm run clean",
     "version": "npm run styleguide:build && git add -A docs",
     "start": "styleguidist server",
