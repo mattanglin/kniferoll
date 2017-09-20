@@ -37,10 +37,10 @@ module.exports = {
     //   name: 'Fonts',
     //   content: path.resolve(__dirname, 'src/fonts/Fonts.md')
     // },
-    {
-      name: 'Styles',
-      content: path.resolve(__dirname, 'src/styles/Styles.md')
-    },
+    // {
+    //   name: 'Styles',
+    //   content: path.resolve(__dirname, 'src/styles/Styles.md')
+    // },
     // {
     //   name: 'Themes',
     //   content: path.resolve(__dirname, 'src/themes/Themes.md')
