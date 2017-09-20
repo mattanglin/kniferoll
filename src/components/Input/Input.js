@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
-import { defaultStyle, mapPropsAndThemeToStyle } from './Input.style';
+import { style } from './Input.style';
 import Wrapper from '../FieldWrapper/FieldWrapper';
 import { withFocus } from '../helpers';
 import { fieldInput } from '../helpers/fieldComposers';
@@ -94,7 +94,7 @@ Input.defaultProps = {
 export const BasicInput = glamorous(Input)(defaultStyle, mapPropsAndThemeToStyle);
 
 const FocusedInput = withFocus(
-  glamorous(Input)(defaultStyle, mapPropsAndThemeToStyle)
+  glamorous(Input)(style)
 );
 
 export const FieldInput = fieldInput(FocusedInput);

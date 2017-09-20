@@ -1,5 +1,5 @@
-import resolvePath from 'object-resolve-path';
 import { lighten } from 'polished';
+import mapThemeStyle from '../helpers/mapThemeStyle';
 
 export const defaultStyle = {
   position: 'relative',
@@ -23,24 +23,20 @@ export const defaultStyle = {
     outline: 'none',
     padding: '8px',
     width: '100%',
+    color: 'black',
+    fontSize: '14px',
+
+    '::placeholder': {
+      color: lighten(0.15, 'black'),
+    },
   },
 };
 
-export const mapPropsAndThemeToStyle = (props) => ({
-  '& input': {
-    border: `1px solid ${props.theme.colors.primaryLight}`,
-    color: props.theme.colors.primaryLight,
-    fontFamily: props.theme.font.baseFamily,
-    fontSize: props.theme.font.baseSize,
-    '::placeholder': {
-      color: lighten(0.3, props.theme.colors.primaryLight),
-      fontWeight: 'bold'
-    },
-  },
+export const style = (props) => ({
   ':after': {
-    backgroundColor: props.error ? props.theme.colors.error : props.theme.colors.success,
+    backgroundColor: props.error ? 'crimson' : 'DeepSkyBlue',
     marginLeft: (props.error || props.focused) ? '0%' : '50%',
     width: (props.error || props.focused) ? '100%' : '0%',
   },
-  ...resolvePath(props, 'theme.Input.css') || {}
+  ...mapThemeStyle(props, 'Input')
 });
