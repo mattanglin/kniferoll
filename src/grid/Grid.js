@@ -67,7 +67,7 @@ Grid.propTypes = {
    */
   mdBreak: PropTypes.number,
   /**
-   * Unit measurement for grid
+   * Unit measurement for grid. Applied to padding, gutter, and breakpoints.
    */
   unit: PropTypes.string,
 };
