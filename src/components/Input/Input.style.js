@@ -27,12 +27,13 @@ export const defaultStyle = {
     fontSize: '14px',
 
     '::placeholder': {
-      color: lighten(0.15, 'black'),
+      color: lighten(0.5, 'black'),
     },
   },
 };
 
 export const style = (props) => ({
+  ...defaultStyle,
   ':after': {
     backgroundColor: props.error ? 'crimson' : 'DeepSkyBlue',
     marginLeft: (props.error || props.focused) ? '0%' : '50%',
