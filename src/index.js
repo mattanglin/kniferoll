@@ -19,8 +19,15 @@ export { defaultTheme } from './themes/defaultTheme';
 /**
  * Kniferoll Library Components
  */
+export { default as Button } from './components/Button/Button';
 export { default as Dialog } from './components/Dialog/Dialog';
+
+/**
+ * Form Components
+ */
 export { default as Checkbox } from './components/Checkbox/Checkbox';
 export { default as FieldWrapper } from './components/FieldWrapper/FieldWrapper';
 export { default as Input } from './components/Input/Input';
+export { FieldInput } from './components/Input/Input';
 export { default as Textarea } from './components/Textarea/Textarea';
+export { FieldTextarea } from './components/Textarea/Textarea';

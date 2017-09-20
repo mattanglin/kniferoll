@@ -4,6 +4,7 @@ import glamorous from 'glamorous';
 import { defaultStyle, mapPropsAndThemeToStyle } from './Textarea.style';
 import Wrapper from '../FieldWrapper/FieldWrapper';
 import { withFocus } from '../helpers';
+import { fieldInput } from '../helpers/fieldComposers';
 
 /**
  * Basic form textarea input. All other props passed to this component will be
@@ -98,6 +99,10 @@ Textarea.defaultProps = {
   rows: 5
 };
 
-export default withFocus(
+const FocusedTextarea = withFocus(
   glamorous(Textarea)(defaultStyle, mapPropsAndThemeToStyle)
 );
+
+
+export const FieldTextarea = fieldInput(FocusedTextarea);
+export default FocusedTextarea;
