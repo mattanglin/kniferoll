@@ -27,21 +27,21 @@ export const defaultStyle = {
   },
 };
 
-export const mapPropsAndThemeToStyle = (props, theme) => ({
+export const mapPropsAndThemeToStyle = (props) => ({
   '& textarea': {
-    border: `1px solid ${theme.colors.primaryLight}`,
-    color: theme.colors.primaryLight,
-    fontFamily: theme.font.baseFamily,
-    fontSize: theme.font.baseSize,
+    border: `1px solid ${props.theme.colors.primaryLight}`,
+    color: props.theme.colors.primaryLight,
+    fontFamily: props.theme.font.baseFamily,
+    fontSize: props.theme.font.baseSize,
     '::placeholder': {
-      color: lighten(0.3, theme.colors.primaryLight),
+      color: lighten(0.3, props.theme.colors.primaryLight),
       fontWeight: 'bold'
     },
   },
   ':after': {
-    backgroundColor: props.error ? theme.colors.error : theme.colors.success,
+    backgroundColor: props.error ? props.theme.colors.error : props.theme.colors.success,
     marginLeft: (props.error || props.focused) ? '0%' : '50%',
     width: (props.error || props.focused) ? '100%' : '0%',
   },
-  ...resolvePath(theme, 'Textarea.css') || {}
+  ...resolvePath(props, 'theme.Textarea.css') || {}
 });
