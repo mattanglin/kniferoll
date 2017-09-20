@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
-import { defaultStyle, mapPropsAndThemeToStyle } from './Textarea.style';
+import { style } from './Textarea.style';
 import Wrapper from '../FieldWrapper/FieldWrapper';
 import { withFocus } from '../helpers';
 import { fieldInput } from '../helpers/fieldComposers';
@@ -100,7 +100,7 @@ Textarea.defaultProps = {
 };
 
 const FocusedTextarea = withFocus(
-  glamorous(Textarea)(defaultStyle, mapPropsAndThemeToStyle)
+  glamorous(Textarea)(style)
 );
 
 

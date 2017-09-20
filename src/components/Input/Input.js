@@ -91,7 +91,7 @@ Input.defaultProps = {
   type: 'text'
 };
 
-export const BasicInput = glamorous(Input)(defaultStyle, mapPropsAndThemeToStyle);
+export const BasicInput = glamorous(Input)(style);
 
 const FocusedInput = withFocus(
   glamorous(Input)(style)
