@@ -32,7 +32,5 @@ TODO
 
 For more detailed usage, please see the individual sections.
 
-- [Fonts](#fonts)
-- [Styles](#styles)
-- [Themes](#themes)
+- [Grid System](#grid-system)
 - [Components](#components)

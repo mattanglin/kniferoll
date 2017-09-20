@@ -1,6 +1,12 @@
 # Kniferoll
 
-React themeable component library.
+Knife Roll is a themeable, React component library. It suits most of my needs and maybe some of yours.
+
+### Features
+
+* Inline styling and theming with [glamorous](https://github.com/paypal/glamorous) and [glamor](https://github.com/threepointone/glamor).
+* Simple, configurable, flexbox grid system.
+
 
 ### Install
 
@@ -12,7 +18,7 @@ React themeable component library.
 
 Please refer to the online styleguide for usage and a list of components:
 
-TODO: pages link
+<a href="https://mattanglin.github.io/kniferoll/" target="_blank">Online Styleguide</a>
 
 ### Running Locally
 

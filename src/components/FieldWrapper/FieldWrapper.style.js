@@ -16,12 +16,12 @@ export const defaultStyle = {
   }
 };
 
-export const mapPropsAndThemeToStyle = (props, theme) => ({
+export const mapPropsAndThemeToStyle = (props) => ({
   '& label': {
-    color: theme.colors.primaryLight
+    // color: theme.colors.primaryLight
   },
   '& .error': {
-    color: theme.colors.error
+    // color: theme.colors.error
   },
-  ...resolvePath(theme, 'FieldWrapper.css') || {}
+  ...resolvePath(props, 'theme.FieldWrapper.css') || {}
 });

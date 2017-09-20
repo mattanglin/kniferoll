@@ -1,6 +1,6 @@
 {
   "name": "kniferoll",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Matt Anglin",
   "description": "React component library",
   "main": "index.js",
@@ -27,8 +27,8 @@
     "babel-polyfill": "^6.23.0",
     "classnames": "^2.2.5",
     "file-loader": "^0.10.0",
-    "glamor": "^2.20.25",
-    "glamorous": "^3.23.4",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.9.2",
     "object-resolve-path": "^1.1.1",
     "polished": "^1.3.0",
     "react": "^15.4.1",

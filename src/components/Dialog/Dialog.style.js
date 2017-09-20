@@ -78,14 +78,14 @@ export const mapTransitionsToStyle = ({ timeout = 150 }) => {
   };
 };
 
-export const mapPropsAndThemeToStyle = (props, theme) => ({
+export const mapPropsAndThemeToStyle = (props) => ({
   '& .dialog': {
-    boxShadow: theme.boxShadow,
-    padding: `${theme.paddingBase * 15}px`,
+    // boxShadow: props.theme.boxShadow,
+    // padding: `${theme.paddingBase * 15}px`,
   },
   '& .title': {
-    fontFamily: theme.font.headerFamily,
+    // fontFamily: theme.font.headerFamily,
     textTransform: 'uppercase',
   },
-  ...resolvePath(theme, 'Dialog.css')
+  ...resolvePath(props, 'theme.Dialog.css')
 });

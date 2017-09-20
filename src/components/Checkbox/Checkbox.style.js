@@ -33,6 +33,6 @@ export const defaultStyle = {
   },
 };
 
-export const mapPropsAndThemeToStyle = (props, theme) => ({
-  ...resolvePath(theme, 'Checkbox.css') || {}
+export const mapPropsAndThemeToStyle = (props) => ({
+  ...resolvePath(props, 'theme.Checkbox.css') || {}
 });

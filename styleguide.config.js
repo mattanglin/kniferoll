@@ -24,14 +24,23 @@ module.exports = {
       name: 'Overview',
       content: path.resolve(__dirname, 'src/Intro.md')
     },
+    {
+      name: 'Grid System',
+      content: path.resolve(__dirname, 'src/grid/GridSystem.md'),
+      components: () => [
+        path.resolve(__dirname, 'src/grid/Grid.js'),
+        path.resolve(__dirname, 'src/grid/Row.js'),
+        path.resolve(__dirname, 'src/grid/Col.js'),
+      ]
+    },
     // {
     //   name: 'Fonts',
     //   content: path.resolve(__dirname, 'src/fonts/Fonts.md')
     // },
-    {
-      name: 'Styles',
-      content: path.resolve(__dirname, 'src/styles/Styles.md')
-    },
+    // {
+    //   name: 'Styles',
+    //   content: path.resolve(__dirname, 'src/styles/Styles.md')
+    // },
     // {
     //   name: 'Themes',
     //   content: path.resolve(__dirname, 'src/themes/Themes.md')
