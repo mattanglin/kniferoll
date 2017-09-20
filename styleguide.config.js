@@ -48,21 +48,12 @@ module.exports = {
     {
       name: 'Components',
       content: path.resolve(__dirname, 'src/components/Components.md'),
-      sections: [
-        {
-          name: 'Notifications',
-          components: () => [
-            path.resolve(__dirname, 'src/components/Dialog/Dialog.js'),
-          ]
-        },
-        {
-          name: 'Forms',
-          components: () => [
-            path.resolve(__dirname, 'src/components/Input/Input.js'),
-            path.resolve(__dirname, 'src/components/Textarea/Textarea.js'),
-            path.resolve(__dirname, 'src/components/Checkbox/Checkbox.js'),
-          ]
-        }
+      components: () => [
+        path.resolve(__dirname, 'src/components/Button/Button.js'),
+        path.resolve(__dirname, 'src/components/Dialog/Dialog.js'),
+        path.resolve(__dirname, 'src/components/Input/Input.js'),
+        path.resolve(__dirname, 'src/components/Textarea/Textarea.js'),
+        path.resolve(__dirname, 'src/components/Checkbox/Checkbox.js'),
       ],
     },
   ],
