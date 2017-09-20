@@ -5,6 +5,7 @@ const unitString = (measurement, unit) => `${measurement}${unit}`;
 
 const generateColStyles = (size, columns, gutter, unit) => {
   const columnSizeStyles = {};
+  const columnSpecStyles = {};
 
   // Do we have a media query?
 
@@ -13,14 +14,14 @@ const generateColStyles = (size, columns, gutter, unit) => {
     const col = i + 1;
 
     // Add individual column style
-    columnSizeStyles[`& .col-${size}-${col}`] = {
+    columnSpecStyles[`& .col-${size}-${col}.col-${size}-${col}`] = {
       MsFlexPreferredSize: `${(100 / columns) * col}%`,
       flexBasis: `${(100 / columns) * col}%`,
       maxWidth: `${(100 / columns) * col}%`,
     };
 
     // Add offsets
-    columnSizeStyles[`& .col-${size}-offset-${i}`] = {
+    columnSpecStyles[`& .col-${size}-offset-${i}`] = {
       marginLeft: `${(100 / columns) * i}%`,
     };
 
@@ -97,7 +98,10 @@ const generateColStyles = (size, columns, gutter, unit) => {
     order: '1',
   };
 
-  return columnSizeStyles;
+  return {
+    ...columnSizeStyles,
+    ...columnSpecStyles
+  };
 };
 
 const generateSizeStyles = (size, columns, gutter, unit, breakpoint) => {
@@ -126,7 +130,7 @@ export const calculateGridStyle = ({
   xsBreak,
   smBreak,
   mdBreak,
-  lgBreak,
+  // lgBreak,
   padding,
   gutter,
   unit,
@@ -141,8 +145,8 @@ export const calculateGridStyle = ({
       marginRight: 'auto',
     },
     '.container.container-fluid': {
-      paddingLeft: unitString(padding),
-      paddingRight: unitString(padding),
+      paddingLeft: unitString(padding, unit),
+      paddingRight: unitString(padding, unit),
     },
     // Row styles
     '& .row': {

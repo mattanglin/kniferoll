@@ -25,8 +25,13 @@ module.exports = {
       content: path.resolve(__dirname, 'src/Intro.md')
     },
     {
-      name: 'Grid',
-      content: path.resolve(__dirname, 'src/grid/Grid.md')
+      name: 'Grid System',
+      content: path.resolve(__dirname, 'src/grid/GridSystem.md'),
+      components: () => [
+        path.resolve(__dirname, 'src/grid/Grid.js'),
+        path.resolve(__dirname, 'src/grid/Row.js'),
+        path.resolve(__dirname, 'src/grid/Col.js'),
+      ]
     },
     // {
     //   name: 'Fonts',

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export const Col = ({
+const Col = ({
   children,
   xs,
   sm,
