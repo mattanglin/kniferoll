@@ -11,10 +11,12 @@ export const Grid = ({
 
   /* eslint-disable */
   columns,
+  padding,
+  gutter,
   xsBreak,
   smBreak,
   mdBreak,
-  lgBreak,
+  unit,
   /* eslint-enable */
 }) => (
   <div className={classNames(className, 'container', { 'container-fluid': fluid })}>
@@ -38,48 +40,32 @@ Grid.propTypes = {
   columns: PropTypes.number.isRequired,
   /**
    * Container padding.
-   * Number for pixel amount, or css string
    */
-  padding: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string
-  ]).isRequired,
+  padding: PropTypes.number.isRequired,
+  /**
+   * Column gutter size
+   */
+  gutter: PropTypes.number.isRequired,
   /**
    * Fluid container or not
    */
   fluid: PropTypes.bool,
   /**
   * xs breakpoint for grid.
-  * Number for pixel amount, or css string
   */
-  xsBreak: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string
-  ]).isRequired,
+  xsBreak: PropTypes.number.isRequired,
   /**
    * sm breakpoint for grid.
-   * Number for pixel amount, or css string
    */
-  smBreak: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string
-  ]).isRequired,
+  smBreak: PropTypes.number.isRequired,
   /**
    * md breakpoint for grid.
-   * Number for pixel amount, or css string
    */
-  mdBreak: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string
-  ]).isRequired,
+  mdBreak: PropTypes.number.isRequired,
   /**
-   * lg breakpoint for grid.
-   * Number for pixel amount, or css string
+   * Unit measurement for grid
    */
-  lgBreak: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string
-  ]).isRequired,
+  unit: PropTypes.string.isRequired,
 };
 
 const GlamorGrid = glamorous(Grid)(calculateGridStyle);
@@ -87,11 +73,12 @@ const GlamorGrid = glamorous(Grid)(calculateGridStyle);
 GlamorGrid.defaultProps = {
   columns: 12,
   padding: 15,
+  gutter: 15,
   fluid: true,
   xsBreak: 576,
   smBreak: 768,
   mdBreak: 992,
-  lgBreak: 1200,
+  unit: 'px',
 };
 
 export default GlamorGrid;

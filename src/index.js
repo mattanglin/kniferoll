@@ -3,6 +3,13 @@
  */
 
 /**
+ * Grid System
+ */
+export { default as Grid } from './grid/Grid';
+export { default as Row } from './grid/Row';
+export { default as Col } from './grid/Col';
+
+/**
  * Themes
  */
 export { ThemeProvider } from 'glamorous';
