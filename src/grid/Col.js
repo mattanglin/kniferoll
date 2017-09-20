@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+/**
+ *  Grid column component
+ */
 const Col = ({
   children,
   xs,
