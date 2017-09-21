@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
-import { defaultStyle, mapPropsAndThemeToStyle } from './Input.style';
+import { style } from './Input.style';
 import Wrapper from '../FieldWrapper/FieldWrapper';
 import { withFocus } from '../helpers';
+import { fieldInput } from '../helpers/fieldComposers';
 
 /**
  * Basic form input. All other props passed to this component will be
@@ -90,8 +91,11 @@ Input.defaultProps = {
   type: 'text'
 };
 
-export const BasicInput = glamorous(Input)(defaultStyle, mapPropsAndThemeToStyle);
+export const BasicInput = glamorous(Input)(style);
 
-export default withFocus(
-  glamorous(Input)(defaultStyle, mapPropsAndThemeToStyle)
+const FocusedInput = withFocus(
+  glamorous(Input)(style)
 );
+
+export const FieldInput = fieldInput(FocusedInput);
+export default FocusedInput;
