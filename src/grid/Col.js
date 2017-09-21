@@ -22,10 +22,10 @@ const Col = ({
       [`col-sm-${sm}`]: sm !== undefined,
       [`col-md-${md}`]: md !== undefined,
       [`col-lg-${lg}`]: lg !== undefined,
-      [`col-xs-offset-${xs}`]: xsOffset !== undefined,
-      [`col-sm-offset-${sm}`]: smOffset !== undefined,
-      [`col-md-offset-${md}`]: mdOffset !== undefined,
-      [`col-lg-offset-${lg}`]: lgOffset !== undefined,
+      [`col-xs-offset-${xsOffset}`]: xsOffset !== undefined,
+      [`col-sm-offset-${smOffset}`]: smOffset !== undefined,
+      [`col-md-offset-${mdOffset}`]: mdOffset !== undefined,
+      [`col-lg-offset-${lgOffset}`]: lgOffset !== undefined,
     })}
   >
     {children}
