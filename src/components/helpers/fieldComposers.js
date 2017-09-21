@@ -6,6 +6,6 @@ import { mapProps } from 'recompose';
 
 export const fieldInput = mapProps(({ input, meta, ...rest }) => ({
   ...rest,
-  error: meta.touched && meta.error,
+  error: (meta.touched && meta.error) ? meta.error : null,
   ...input,
 }));
