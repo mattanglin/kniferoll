@@ -3,7 +3,7 @@ import mapThemeStyle from '../helpers/mapThemeStyle';
 
 export const defaultStyle = {
   position: 'relative',
-  ':after': {
+  '&:after': {
     bottom: 0,
     backgroundColor: 'black',
     content: '""',
