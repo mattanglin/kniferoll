@@ -18,6 +18,7 @@ export const defaultStyle = {
   '& input': {
     border: '1px solid black',
     borderRadius: 0,
+    boxSizing: 'border-box',
     height: '36px',
     minWidth: '166px',
     outline: 'none',

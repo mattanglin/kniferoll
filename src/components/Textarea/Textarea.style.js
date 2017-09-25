@@ -18,6 +18,7 @@ export const defaultStyle = {
   '& textarea': {
     border: '1px solid black',
     borderRadius: 0,
+    boxSizing: 'border-box',
     minWidth: '166px',
     outline: 'none',
     padding: '8px',
