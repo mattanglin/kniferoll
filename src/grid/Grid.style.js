@@ -114,6 +114,9 @@ const generateSizeStyles = (size, columns, gutter, unit, breakpoint) => {
           width: unitString(breakpoint, unit),
           maxWidth: '100%',
         },
+        '.container-fluid': {
+          width: 'auto'
+        },
         ...styles,
       }
     };
