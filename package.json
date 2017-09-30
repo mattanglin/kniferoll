@@ -1,6 +1,6 @@
 {
   "name": "kniferoll",
-  "version": "0.2.7",
+  "version": "0.3.0",
   "author": "Matt Anglin",
   "description": "React component library",
   "main": "index.js",
