@@ -31,3 +31,5 @@ export { default as Input } from './components/Input/Input';
 export { FieldInput } from './components/Input/Input';
 export { default as Textarea } from './components/Textarea/Textarea';
 export { FieldTextarea } from './components/Textarea/Textarea';
+export { default as Toggle } from './components/Toggle/Toggle';
+export { FieldToggle } from './components/Toggle/Toggle';

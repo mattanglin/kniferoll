@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import glamorous from 'glamorous';
-import { defaultStyle, mapPropsAndThemeToStyle } from './Checkbox.style';
+import { defaultStyle, mapPropsAndThemeToStyle } from './Toggle.style';
 import Wrapper from '../FieldWrapper/FieldWrapper';
 import { asSwitch } from '../helpers';
+import { fieldInput } from '../helpers/fieldComposers';
 
 /**
  * Basic checkbox input.
  */
-export const Checkbox = ({
-  checkedComponent,
+export const Toggle = ({
   className,
   description,
   disabled,
@@ -18,7 +19,6 @@ export const Checkbox = ({
   label,
   name,
   onSwitch,
-  uncheckedComponent,
   switched,
   ...rest
 }) => (
@@ -28,30 +28,23 @@ export const Checkbox = ({
     labelFor={name}
   >
     <div
-      className={`checkbox ${className} ${disabled ? 'disabled' : ''}`}
+      className={classNames('toggle', className, { disabled, on: switched, off: !switched })}
       onClick={onSwitch}
       {...rest}
     >
-      <div className={`check ${switched ? 'checked' : 'unchecked'}`}>
-        <div className="checkbox-checked">
-          {checkedComponent}
-        </div>
-        <div className="checkbox-unchecked">
-          {uncheckedComponent}
-        </div>
-      </div>
       {label &&
         <label htmlFor={label}>{label}</label>
       }
+      <div className="wrapper">
+        <div className="switch-rail">
+          <div className="switch" />
+        </div>
+      </div>
     </div>
   </Wrapper>
 );
 
-Checkbox.propTypes = {
-  /**
-   * Component to display when checked
-   */
-  checkedComponent: PropTypes.node,
+Toggle.propTypes = {
   /**
    * className for glamorous styles
    * @ignore
@@ -97,10 +90,6 @@ Checkbox.propTypes = {
    */
   onSwitch: PropTypes.func,
   /**
-   * Component to display when unchecked
-   */
-  uncheckedComponent: PropTypes.node,
-  /**
    * Switched state from asSwtich HOC
    * @ignore
    */
@@ -110,11 +99,10 @@ Checkbox.propTypes = {
    */
   value: PropTypes.bool,
 };
-Checkbox.defaultProps = {
-  checkedComponent: <i className="fa fa-check-square-o" />,
-  uncheckedComponent: <i className="fa fa-square-o" />
-};
 
-export default asSwitch(
-  glamorous(Checkbox)(defaultStyle, mapPropsAndThemeToStyle)
+const StyledToggle = asSwitch(
+  glamorous(Toggle)(defaultStyle, mapPropsAndThemeToStyle)
 );
+
+export const FieldToggle = fieldInput(StyledToggle);
+export default StyledToggle;

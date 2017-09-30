@@ -54,6 +54,7 @@ module.exports = {
         path.resolve(__dirname, 'src/components/Input/Input.js'),
         path.resolve(__dirname, 'src/components/Textarea/Textarea.js'),
         path.resolve(__dirname, 'src/components/Checkbox/Checkbox.js'),
+        path.resolve(__dirname, 'src/components/Toggle/Toggle.js'),
       ],
     },
   ],
