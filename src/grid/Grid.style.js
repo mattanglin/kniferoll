@@ -161,8 +161,8 @@ export const calculateGridStyle = ({
       flexDirection: 'row',
       MsFlexWrap: 'wrap',
       flexWrap: 'wrap',
-      marginRight: `-${unitString(padding)}`,
-      marginLeft: `-${unitString(padding)}`,
+      marginRight: `-${unitString(padding, unit)}`,
+      marginLeft: `-${unitString(padding, unit)}`,
     },
     '& .row.reverse': {
       WebkitBoxOrient: 'horizontal',
