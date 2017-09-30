@@ -7,6 +7,7 @@ import classNames from 'classnames';
  */
 const Col = ({
   children,
+  className,
   xs,
   sm,
   md,
@@ -15,8 +16,10 @@ const Col = ({
   smOffset,
   mdOffset,
   lgOffset,
+  ...rest,
 }) => (
   <div
+    {...rest}
     className={classNames({
       [`col-xs-${xs}`]: xs !== undefined,
       [`col-sm-${sm}`]: sm !== undefined,
@@ -26,7 +29,7 @@ const Col = ({
       [`col-sm-offset-${smOffset}`]: smOffset !== undefined,
       [`col-md-offset-${mdOffset}`]: mdOffset !== undefined,
       [`col-lg-offset-${lgOffset}`]: lgOffset !== undefined,
-    })}
+    }, className)}
   >
     {children}
   </div>
@@ -37,6 +40,7 @@ Col.propTypes = {
    * Col children
    */
   children: PropTypes.node,
+  className: PropTypes.string,
   /**
    * Col spread at xs
    */

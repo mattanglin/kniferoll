@@ -7,9 +7,11 @@ import classNames from 'classnames';
  */
 const Row = ({
   children,
+  className,
   reverse,
+  ...rest,
 }) => (
-  <div className={classNames('row', { reverse })}>
+  <div {...rest} className={classNames('row', { reverse }, className)}>
     {children}
   </div>
 );
@@ -19,6 +21,7 @@ Row.propTypes = {
    * Row children
    */
   children: PropTypes.node,
+  className: PropTypes.string,
   /**
    * Whether to reverse the column order or not
    */
