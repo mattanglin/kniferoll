@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { compose, lifecycle, withHandlers } from 'recompose';
-import shortid from 'shortid';
 import glamorous from 'glamorous';
+import { Button } from '../../';
 import {
   defaultStyle,
   mapTransitionsToStyle,
@@ -58,7 +58,6 @@ export const Dialog = ({
         >
           <div
             className="overlay"
-            key={shortid.generate()}
             onClick={onOverlayClick}
           >
             <div className="dialog" onClick={(e) => e.stopPropagation()}>
@@ -75,20 +74,20 @@ export const Dialog = ({
               {(onCancel || onConfirm) &&
                 <div className="actions">
                   {onCancel &&
-                    <button
+                    <Button
                       className="cancel"
                       onClick={onCancel}
                     >
                       {cancelText}
-                    </button>
+                    </Button>
                   }
                   {onConfirm &&
-                    <button
+                    <Button
                       className="confirm"
                       onClick={onConfirm}
                     >
                       {confirmText}
-                    </button>
+                    </Button>
                   }
                 </div>
               }

@@ -6,11 +6,11 @@ const closeDialog = () => setState({ dialogOpen: false });
 <div className="container">
   <div className="row">
     <div className="col-xs-12 col-sm-4">
-      <button
+      <Button
         onClick={showDialog}
       >
         Show Dialog
-      </button>
+      </Button>
       <Dialog
         content="This is a super, simple Dialog box!"
         onConfirm={closeDialog}
@@ -33,11 +33,11 @@ const closeDialog = () => setState({ dialogOpen: false });
 <div className="container">
   <div className="row">
     <div className="col-xs-12 col-sm-4">
-      <button
+      <Button
         onClick={showDialog}
       >
         Full Dialog
-      </button>
+      </Button>
       <Dialog
         content="This is a super simple Dialog box!"
         cancelText="Not into it..."
@@ -67,32 +67,32 @@ const DialogContent = () => (
       <div>
         <p style={{ maxWidth: '60%', margin: '30px auto' }}>You can add your own components as children to a dialog to show whatever you want inside including multi-page Dialogs!</p>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <button
+          <Button
             onClick={closeDialog}
           >
             Cancel
-          </button>
-          <button
+          </Button>
+          <Button
           onClick={setStep(2)}
           >
             Next
-          </button>
+          </Button>
         </div>
       </div>
     ) : (
       <div>
         <p style={{ maxWidth: '60%', margin: '30px auto' }}>This is the second page of a custom rendered componetn Dialog.</p>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <button
+          <Button
             onClick={setStep(1)}
           >
             Previous
-          </button>
-          <button
+          </Button>
+          <Button
           onClick={closeDialog}
           >
             Finish
-          </button>
+          </Button>
         </div>
       </div>
     )}
@@ -102,11 +102,11 @@ const DialogContent = () => (
 <div className="container">
   <div className="row">
     <div className="col-xs-12 col-sm-4">
-      <button
+      <Button
         onClick={showDialog}
       >
         Custom Dialog
-      </button>
+      </Button>
       <Dialog
         onOverlayClick={() => console.log('You must use actions to close this Dialog!')}
         open={state.dialogOpen}
